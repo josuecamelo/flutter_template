@@ -48,86 +48,88 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image(
-              image:AssetImage("assets/imagens/login.gif"),
-              height:140.0,
-              width:140.0,
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Image(
+                image:AssetImage("assets/imagens/login.gif"),
+                height:140.0,
+                width:140.0,
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
 
 
-            Card(
-              elevation: 5.0,
-              child: Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Column(
-                  children: <Widget>[
-                    _emailtxt(),
-                    SizedBox(
-                      height: 20.0,
-                    ),
-                    _senhatxt(),
-                  ],
+              Card(
+                elevation: 5.0,
+                child: Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: Column(
+                    children: <Widget>[
+                      _emailtxt(),
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      _senhatxt(),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 30.0,
-            ),
-            Button("Logar"),
-            Divider(
-              height: 35.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  "Não possui Cadastro?",
-                  style: TextStyle(
-                      color: Color(0xFFBDC2CB),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16.0),
-                ),
-                SizedBox(width: 10.0),
-                GestureDetector(
-                  onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => CadastroPage()
-                     ));
-                  },
-                  child: Text(
-                    "Cadastre-se",
+              SizedBox(
+                height: 30.0,
+              ),
+              Button("Logar"),
+              Divider(
+                height: 35.0,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    "Não possui Cadastro?",
                     style: TextStyle(
-                        color: Colors.blueAccent,
+                        color: Color(0xFFBDC2CB),
                         fontWeight: FontWeight.bold,
                         fontSize: 16.0),
                   ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  "Recuperar Senha?",
-                  style: TextStyle(
-                    fontSize: 15.0,
-                    color: Colors.red,
-                    fontWeight: FontWeight.w400,
+                  SizedBox(width: 10.0),
+                  GestureDetector(
+                    onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => CadastroPage()
+                       ));
+                    },
+                    child: Text(
+                      "Cadastre-se",
+                      style: TextStyle(
+                          color: Colors.blueAccent,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16.0),
+                    ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    "Recuperar Senha?",
+                    style: TextStyle(
+                      fontSize: 15.0,
+                      color: Colors.red,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
