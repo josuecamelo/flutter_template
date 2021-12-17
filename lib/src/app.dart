@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_template/src/tabs/tabs.dart';
 import 'pages/TelaInicial.dart';
 
 class App extends StatelessWidget {
@@ -7,7 +8,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: "Aplicativo",
       theme: ThemeData(primaryColor: Colors.blueAccent),
-      home: TelaInicial(),
+      home: Tabs(),
     );
   }
 }
